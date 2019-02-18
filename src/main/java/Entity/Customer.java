@@ -6,6 +6,7 @@ public class Customer {
 	private String destination;
 	private int number;
 	
+	
 	public Customer()
 	{
 		this("nowhere","nowhere",0);

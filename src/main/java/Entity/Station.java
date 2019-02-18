@@ -1,17 +1,6 @@
 package Entity;
 
-public class Station 
+public interface Station 
 {
-
-	public Station() 
-	{
-		
-	}
-	
-	public int Station_count()
-	{
-		int there = 0;
-		return there;
-	}
-	
+public int Station_count();
 }

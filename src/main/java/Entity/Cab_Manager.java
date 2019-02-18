@@ -36,7 +36,9 @@ public class Cab_Manager {
 	   {
 	       return password;
 	   }
+	
+	public String toString() 
+	{
+		return "Cab_Manager [email=" + email + ", password=" + password + "]";
 	}
-
-
-
+}
