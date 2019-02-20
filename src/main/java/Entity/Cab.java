@@ -1,23 +1,23 @@
 package Entity;
 
-public  class Cab {
-	
-	
 
+public class Cab {
 	private int c_id;
 	private int req_id;
 	private int trn;
 	private int year;
 	private String model;
 	private String name;
-	
+	private boolean available;
+	private double fare;
 
 	public Cab()
 	{
-		this(0,0,0,0,"civic","John Jones");
+		this(0,0,0,0,"civic","John Jones",false,0.0);
 	}
 
-	public Cab(int c_id, int req_id, int trn, int year, String model, String name) {
+		
+	public Cab(int c_id, int req_id, int trn, int year, String model, String name, boolean available, double fare) {
 		super();
 		this.c_id = c_id;
 		this.req_id = req_id;
@@ -25,6 +25,8 @@ public  class Cab {
 		this.year = year;
 		this.model = model;
 		this.name = name;
+		this.available = available;
+		this.fare = fare;
 	}
 
 	public int getC_id() {
@@ -75,9 +77,29 @@ public  class Cab {
 		this.name = name;
 	}
 	
+	
+	public boolean isAvailable() {
+		return available;
+	}
+
+	public void setAvailable(boolean available) {
+		this.available = available;
+	}
+
+	public double getFare() {
+		return fare;
+	}
+
+	public void setFare(double fare) {
+		this.fare = fare;
+	}
+
 	@Override
 	public String toString() {
 		return "Cab [c_id=" + c_id + ", req_id=" + req_id + ", trn=" + trn + ", year=" + year + ", model=" + model
-				+ ", name=" + name + "]";
+				+ ", name=" + name + ", available=" + available + ", fare=" + fare + "]";
 	}
+
+	
 }
+

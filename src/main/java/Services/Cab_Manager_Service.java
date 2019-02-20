@@ -14,19 +14,14 @@ public class Cab_Manager_Service extends Cab_Manager
 		return success;
 	}
 	
-	public Report req_report()
-	{
-		return null;		
-	}
-
-	public Report dist_report()
-	{
-		return null;		
-	}
-	
 	public boolean Add_Cab(Cab c)
 	{
-		
+		return false;
+	}
+	
+	public boolean Delete_Cab(Cab c)
+	{
+		return false;
 	}
 	
 }

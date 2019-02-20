@@ -5,21 +5,25 @@ public class Customer {
 	private String location;
 	private String destination;
 	private int number;
+	private String feedback;
+	private Rate rating;
 	
-	
+
 	public Customer()
 	{
-		this("nowhere","nowhere",0);
+		this("nowhere","nowhere",0, "lovely", Rate.ok);
 	}
 	
-	public Customer(String location, String destination, int number)
-	{
+	
+	public Customer(String location, String destination, int number, String feedback, Rate rating) {
 		super();
 		this.location = location;
 		this.destination = destination;
 		this.number = number;
+		this.feedback = feedback;
+		this.rating = rating;
 	}
-	
+
 	public String getLocation() 
 	{
 		return location;
@@ -47,9 +51,31 @@ public class Customer {
 	 {
 		this.number = number;
 	 }
-	public String toString() 
-	{
-		return "Customer [location=" + location + ", destination=" + destination + ", number=" + number + "]";
+	
+	
+	public String getFeedback() {
+		return feedback;
 	}
+
+	public void setFeedback(String feedback) {
+		this.feedback = feedback;
+	}
+
+	public Rate getRating() {
+		return rating;
+	}
+
+	public void setRating(Rate rating) {
+		this.rating = rating;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Customer [location=" + location + ", destination=" + destination + ", number=" + number + ", feedback="
+				+ feedback + ", rating=" + rating + "]";
+	}
+
+
 }
 
