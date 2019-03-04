@@ -1,9 +1,9 @@
 package Services;
 import Entity.Cab;
-import Entity.Cab_Manager;
+import Entity.CabManager;
 import Entity.Report;
 
-public class Cab_Manager_Service extends Cab_Manager
+public class CabManagerService extends CabManager
 {
 	
 	

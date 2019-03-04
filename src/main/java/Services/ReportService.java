@@ -2,7 +2,7 @@ package Services;
 
 import Entity.Report;
 
-public class Report_service {
+public class ReportService {
 
 
 	public Report req_report()

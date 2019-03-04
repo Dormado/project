@@ -11,7 +11,8 @@ import Entity.Station;
  * @author Demar Johnson
  *
  */
-public class Customer_Service extends Customer implements Station
+
+public class CustomerService extends Customer implements Station
 {	
 	public boolean req_av(Station s) // check for taxi's availability in the station
 	{

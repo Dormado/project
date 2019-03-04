@@ -1,8 +1,8 @@
 package Database;
 
-public class Report_db extends SQL_Provider{
+public class SystemDb /*extends SQLProvider*/{
 
-	public Report_db() {
+	public SystemDb() {
 		// TODO Auto-generated constructor stub
 	}
 

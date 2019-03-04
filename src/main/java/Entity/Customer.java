@@ -7,8 +7,10 @@ public class Customer {
 	private int number;
 	private String feedback;
 	private Rate rating;
-	
+	private boolean confirm_pkup;
+	private boolean confirm_cab;
 
+	
 	public Customer()
 	{
 		this("nowhere","nowhere",0, "lovely", Rate.ok);

@@ -4,7 +4,7 @@ import Entity.Cab;
 import Entity.Customer;
 import Entity.Rate;
 
-public class Feedback_service extends Customer
+public class FeedbackService extends Customer
 {
 	
 	public String make_comment()

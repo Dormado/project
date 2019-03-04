@@ -6,33 +6,31 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
-import Database.SQL_Provider;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
 
-abstract public class SQL_Provider <T>
+abstract public class SQLProvider <T>
 {
-	protected Connection con = null; // connection object to database
+	protected Connection connect = null; // connection object to database
 	protected Statement statement = null; // use to execute sql statement
 	protected ResultSet result = null; // used to collect result data from 	// database
 									
 	private static final String DRIVER = "org.sqlite.JDBC"; 
-	private static Logger logger = LogManager.getLogger(SQL_Provider.class);
+	private static Logger logger = LogManager.getLogger(SQLProvider.class);
 
 
 	
 	@SuppressWarnings("deprecation")
-	public SQL_Provider() 
+	public SQLProvider() 
 	{
 		try 
 		{
 			logger.trace("Attempting to connect to database, errors may occur");
 			Class.forName(DRIVER).newInstance(); 
 			String url = "jdbc:sqlite:inventory.sqlite"; 
-			con = DriverManager.getConnection(url);
+			connect = DriverManager.getConnection(url);
 			
 			initSQLDatabase();
 
